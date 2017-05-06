@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% load static from staticfiles %}
+
+{% block title %} Error | Agente de Becas {% endblock %}
+
+{% block contenido %}
+<div class="col-md-12">
+    <div class="cp-page404">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="p404">
+                        <img src="{% static "images/p404-icon.png" %}" alt="">
+                        <h2>OOPS!<br>
+                        Página No Encontrada</h2>
+                        <strong>La página que estas buscando no existe.</strong>
+                        <div class="loadmore-holder"> <a class="load waves-effect waves-button" href="/">Inicio <i class="fa fa-home"></i></a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block sidebar %}
+&nbsp;
+{% endblock%}
