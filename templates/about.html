@@ -1,6 +1,8 @@
-{% extends 'base.html' %}
+  {% extends 'base.html' %}
 
 {% load static from staticfiles %}
+
+{% block title %} ¿Qué es? | Google IO Extended 2017 {% endblock %}
 
 {% block loadfiles %}
 {% endblock %}
@@ -17,23 +19,25 @@
         <div class="row">
   <div class="col-sm-12 col-sm-6">
     <div class="sec_header_left">
-      <h2>DEVFEST</h2>
+      <h2>GOOGLE IO 2017</h2>
     </div>  
-    <img class="img-responsive" src="{% static "images/devfest2013.jpg" %}" alt="Devfest Bogotá 2013">
-    <p>El Google IO Extended 2017 es un evento organizado por la comunidad donde se presentan diferentes sesiones técnicas alrededor de las tecnologías de Google para desarrolladores. Organizamos el Google IO Extended 2017 porque creemos que cuando juntamos varios desarrolladores que intercambian ideas, cosas increíbles pueden pasar.</p>
+    <img class="img-responsive sec_header_img" src="{% static "images/about/googleio1.jpg" %}" alt="Devfest Bogotá 2013">
+    <p>El Google I/O es un festival anual de desarrolladores, donde celebramos lo ultimo en tecnología y mucho mas. Debido a que el evento principal es en Mountain View, California, y no todos los desarrolladores pueden ser parte, Google con los GDGs estan trayendo el evento a las diferentes ciudaddes del mundo a través de los eventos Google I/O Extended.</p>
+
+    <p>El Google I/O Extended La Paz 2017 tiene la intención de unir comunidades y difundir las ultimas tendencias expuestas en Mountain View. El 17 de Junio, el Google Developer Group La Paz presentara uno de los mas grandes eventos Google I/O Extended en Bolivia, con cientos de desarrolladores y entusiastas Google participando desde toda Bolivia.</p>
   </div>
   <div class="col-sm-12 col-sm-6">
     <div class="sec_header_left">
-      <h2>GDG</h2>
+      <h2>GDG LA PAZ</h2>
     </div>  
-    <img class="img-responsive" src="{% static "images/GoogleDeveloperBus.jpg" %}" alt="GDG Bogotá">
-    <p>Google Developers Group (GDG) - es una comunidad abierta para crear y compartir experiencias y proyectos interesantes con tecnologías Google.</p>
-    <p>Somos un grupo de personas que utilizamos las tecnologías de Google a diario, ya sea en el ámbito laboral, desde el desarrollo de aplicaciones, o como usuarios finales de sus productos. Nuestro principal interés, es integrar a la comunidad, personas como nosotros y entre todos comunicar, compartir e incentivar el conocimiento y la difusión de información con el fin de ampliar el uso de las tecnologías de Google en la sociedad Boliviana</p>
+    <img class="img-responsive sec_header_img" src="{% static "images/about/googleio2.jpg" %}" alt="GDG Bogotá">
+    <p>El Google Developers Group La Paz es una comunidad abierta para crear y compartir experiencias y proyectos interesantes con tecnologías Google.</p>
+    <p>Somos un grupo de personas que utilizamos las tecnologías de Google a diario, ya sea en el ámbito laboral, desde el desarrollo de aplicaciones, o como usuarios finales de sus productos. Nuestro principal interés, es integrar a la comunidad, personas como nosotros y entre todos comunicar, compartir e incentivar el conocimiento y la difusión de información con el fin de ampliar el uso de las tecnologías Google en la sociedad Boliviana</p>
   </div>
 </div>
       </div>
     </section>
-    <section class="row gallery">
+    <section class="row gallery" style="margin-bottom:-5px;">
     <div class="container">
         <div class="row sec_header">
             <h2>Nuestros eventos</h2>
@@ -43,27 +47,18 @@
     <div class="gallery_inner">
       
       <div class="col-sm-3 item"> 
-        <a href="{% static "images/past_events/1.jpg" %}" data-lightbox="roadtrip">
-          <img src="{% static "images/past_events/1.jpg" %}" alt="">
-        </a> 
+          <img src="{% static "images/past_events/1.jpg" %}" alt=""> 
       </div>
-      
       <div class="col-sm-3 item"> 
-        <a href="{% static "images/past_events/2.jpg" %}" data-lightbox="roadtrip">
           <img src="{% static "images/past_events/2.jpg" %}" alt="">
-        </a> 
       </div>
       
       <div class="col-sm-3 item"> 
-        <a href="{% static "images/past_events/3.jpg" %}" data-lightbox="roadtrip">
           <img src="{% static "images/past_events/3.jpg" %}" alt="">
-        </a> 
       </div>
       
       <div class="col-sm-3 item"> 
-        <a href="{% static "images/past_events/4.jpg" %}" data-lightbox="roadtrip">
           <img src="{% static "images/past_events/4.jpg" %}" alt="">
-        </a> 
       </div>
       
     </div>

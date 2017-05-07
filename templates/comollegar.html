@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% load static from staticfiles %}
+
+
+{% block title %} Cómo llegar | Google IO Extended 2017 {% endblock %}
+
+{% block loadfiles %}
+{% endblock %}
+
+{% block encabezado %}
+<div class="page_title">
+              <h2>Cómo llegar</h2>
+              <h4></h4>
+          </div>
+{% endblock %}
+{% block contenido %}
+<section class="row">
+      <div class="container">
+        <section class="row get-there">
+  <h2 style="padding-top: 4rem; padding-bottom: 4rem;">¿Cómo llegar?</h2>
+
+  <section class="row g_map">
+  <!-- Map -->
+  <div id="map" 
+  data-latcenter="-16.507135"
+  data-lngcenter="-68.138909"
+  data-latmarker="-16.506335"
+  data-lngmarker="-68.125560"></div>
+
+  <div class="container">
+    <div class="row contact_info">
+      <h3>Lugar:</h3>
+      <div class="widget row m0">
+        <ul>
+          <li>
+            <i class="fa fa-map-marker"></i>
+            <div class="location_address fleft">
+              Rosendo Gutierrez Rosendo Gutierrez <br> esq. Oscar Soria
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-clock-o"></i>
+            <div class="fleft service_time">
+              08:00 AM - 18:00 PM
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<h3>Puntos de referencia</h3>
+
+<div>La Cinemateca Boliviana se encuentra encuentra ubicada a dos cuadras de la avenida Arce cuadra de la carrera séptima y a una cuadra de la plaza Bolivia, la zona se compone de edificios de oficinas y universidades, por lo que existen diferentes rutas de transporte público que te llevarán prácticamente desde cualquier punto de la ciudad.</div>
+
+<h3>Transporte público</h3>
+
+<ul style="margin-bottom: 50px;">
+  <li>
+    Cualquier bus o minibus que diga <b>Avenida Arce, Prado</b> te dejará a dos cuadras del lugar del evento.
+  </li>
+</ul>
+</section>
+</div>
+{% endblock %}
+
+{% block loadfilesbelow %}
+      
+{% endblock %}

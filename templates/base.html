@@ -11,7 +11,7 @@
 
   <link rel="icon" href="{% static "images/favicon.ico" %}" type="image/x-icon">
 
-  <title>{% block title %} Inicio | Google IO extended 2017 {% endblock %}</title>
+  <title>{% block title %} Inicio | Google IO Extended 2017 {% endblock %}</title>
   <meta name="description" content="Porque sabemos que te encanta compartir tu pasión por el código con gente como tú, ya viene el Google IO Extended 2017 ¡El evento más importante de tecnología de Google en La Paz!
 ">
 
@@ -28,6 +28,7 @@
   <!-- Flexslider  -->
   <link href='{% static "vendors/flexslider/flexslider.css" %}' rel="stylesheet">
   <link href='{% static "css/main.css" %}' rel="stylesheet">
+  <link href='{% static "css/mainextended.css" %}' rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
@@ -66,7 +67,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html"><img src="{% static "images/header/final2.gif" %}" alt="/" ></a>
+          <a href="/">
+            <div class="navbar-brand" >
+              <img src="{% static "images/header/final2.gif" %}">
+            </div>
+          </a>
         </div>
         <!-- Menu -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -83,14 +88,14 @@
                 class="active"
               {% endif %}
             >
-              <a href="about/">¿Qué es?</a>
+              <a href="/about">¿Qué es?</a>
             </li>
             <li 
-              {% if request.path == "/como-llegar/" %}
+              {% if request.path == "/comollegar/" %}
               class="active"
               {% endif %}
             >
-              <a href="como-llegar/">Cómo llegar</a>
+              <a href="/comollegar">Cómo llegar</a>
             </li>
 
             <!-- <li >
@@ -116,11 +121,11 @@
 <footer>
   <div class="container">
     <div class="row footer_top">
-      <img src="{% static "images/header/logo.png" %}" alt="#">
+      <img src="{% static "images/header/final2.gif" %}" alt="#">
     </div>
     <div class="row footer_bottom">
       <div class="left">
-        Copyleft &copy; 2016 <span>GDG La Paz</span> | Original was created by GDG Bogotá
+        Copyleft &copy; 2016 <span>GDG La Paz</span>
       </div>
       <!-- Menu -->
       <div class="footer_menu">
@@ -138,11 +143,11 @@
           >
             <a href="about/">¿Qué es?</a></li>
           <li 
-            {% if request.path == "/como-llegar/" %}
+            {% if request.path == "/comollegar/" %}
             class="active"
             {% endif %}
           >
-            <a href="como-llegar/">Cómo llegar</a></li>
+            <a href="comollegar/">Cómo llegar</a></li>
 
           <!-- <li >
                 <a href="/agenda/">Agenda</a>
