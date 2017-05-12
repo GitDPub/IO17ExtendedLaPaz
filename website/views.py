@@ -68,8 +68,6 @@ def registro(request):
     ctx = {'form':form,'correo':correo,'nombre':nombre,'apellido':apellido,'info_enviado':info_enviado}
     return render_to_response('registro.html',ctx,context_instance=RequestContext(request))
 
-
-
 def error(request):
     ctx = {'error':'error'}
 
