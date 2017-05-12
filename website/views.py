@@ -35,6 +35,41 @@ def comollegar(request):
     ctx = {}
     return render_to_response('comollegar.html', ctx, context_instance=RequestContext(request))
 
+def registro(request):
+    info_enviado=False
+    correo=""
+    nombre=""
+    apellido=""
+    #miestado = Estado.objects.get(nombre="Nuevo")
+    
+    if request.method == 'POST':
+        form = RegistroForm(request.POST, request.FILES)
+        if form.is_valid():
+            info_enviado = True
+            correo=form.cleaned_data['correo']
+            nombre=form.cleaned_data['nombre']
+            apellido=form.cleaned_data['apellido']
+            registro = form.save()
+            
+            email_asunto = "Registro Google IO Extended La Paz 2017"
+            email_mensaje = "<p>Estimado %s %s : </p><br>  <p>Gracias por registrarte al evento mas grande en tecnologia.</p><br><p>Para oficializar su registro debe realizar un deposito</p>"%(nombre,apellido)
+            email_texto = "Estimado %s %s : /n Gracias por registrarte al evento mas grande en tecnologia. /n Para oficializar su registro debe realizar un deposito."%(nombre,apellido)
+            #configuracion del envio de correo
+            msg=EmailMultiAlternatives(email_asunto,email_texto,'Webmaster <gdglapaz@gmail.com>',[correo])
+            msg.attach_alternative(email_mensaje,'text/html')
+            #msg.send()
+        #else:
+            #form.fields['estado'].widget = forms.HiddenInput()   
+    else:
+        form = RegistroForm()
+        #form.fields['estado'].widget = forms.HiddenInput()
+        #form.fields['adjunto'].widget = forms.HiddenInput()
+
+    ctx = {'form':form,'correo':correo,'nombre':nombre,'apellido':apellido,'info_enviado':info_enviado}
+    return render_to_response('registro.html',ctx,context_instance=RequestContext(request))
+
+
+
 def error(request):
     ctx = {'error':'error'}
 
@@ -57,24 +92,3 @@ def handler500(request):
                                   context_instance=RequestContext(request))
     response.status_code = 500
     return response
-
-# def duplicar(request):
-#     total = Oportunidad.objects.all().count()
-#     paises = Pais.objects.all().count()
-#     initial = 1
-#     # for x in range(100, 200):
-#     #     oportunidad = Oportunidad.objects.get(id=initial)
-#     #     oportunidad.id = oportunidad.id +1
-#     #     oportunidad.titulo = 'a' + str(random.randint(1,9000))
-#     #     print oportunidad.titulo         
-#     #     oportunidad.save()
-#     #     initial+=1
-#     oportunidad = Oportunidad.objects.get(id=initial)
-#     oportunidad.id = total +10
-#     oportunidad.titulo = 'b' + str(random.randint(1,9000))    
-#     oportunidad.save()
-    
-#     ctx = {'total':total,'paises':paises,
-#     }
-
-#     return render_to_response('index.html', ctx, context_instance=RequestContext(request))

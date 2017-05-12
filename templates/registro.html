@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% load static from staticfiles %}
+
+
+{% block title %} Cómo llegar | Google IO Extended 2017 {% endblock %}
+
+{% block loadfiles %}
+{% endblock %}
+{% load bootstrap %}
+
+{% block encabezado %}
+<div class="page_title">
+              <h2>Registro</h2>
+              <h4></h4>
+          </div>
+{% endblock %}
+{% block contenido %}
+  {% if not info_enviado %}
+        <div class="row" style="margin:20px">
+            <div class="col-md-8 col-md-offset-4"  style="margin:15px;">
+                <div class="jumbotron" style="box-shadow: 5px 5px 15px #888888;padding: 30px;margin: auto;">
+                    <h3>Estimado <b>{{nombre}} {{apellido}}</b> :</h3>
+                    <p align="justify">Su registro se realizo de manera correcta, gracias!
+                    </p>
+                    <p>El registro sera oficializado con el pago de la entrada al evento. Pronto le enviaremos mas detalles al respecto.
+                    </p>
+                    <p align="justify">Este mensaje también sera enviado a su correo {{correo}}, este atento a su bandeja de entrada</p>
+                    <p align="right"><a class="btn btn-primary btn-lg"  role="button" href="/">Inicio</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-lg-12 -->
+        {% else%}
+        <div class="row" >
+        <!-- /.col-lg-6 -3-->
+        <div class="col-md-6 col-md-offset-3" style="padding: 20px;">
+            <div class="panel panel-primary" style="box-shadow: 5px 5px 15px #888888;">
+                <div class="panel-heading">
+                <b>Pre Registro del Evento </b>
+                </div>
+                <div class="panel-body">
+                    <div class="row" style="padding: 20px;">
+                        <form role="form" method="post" action="." enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <fieldset>
+                            {{form | bootstrap }}
+                            <!-- Change this to a button or input when using this as a form -->
+                            <input type="submit" style="margin-top:5px;"class="btn btn-lg btn-primary btn-block" value="Enviar"/> 
+                            <input type="hidden" name="next" value="{{ next }}"/>
+                            </fieldset>
+                        </form>        
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->            
+          </div>
+        </div>
+        {% endif %}
+{% endblock %}
+
+{% block loadfilesbelow %}
+      
+{% endblock %}

@@ -10,11 +10,7 @@ from django.template.loader import render_to_string
 from datetime import date
 from django.core.exceptions import ValidationError
 
-# class ConsultaForm(ModelForm):
-#     class Meta:
-#         model = Consulta
-
-#     nombre = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Nombre','class': 'form-control',}))
-#     correo = forms.CharField(widget=forms.EmailInput(attrs={'placeholder': 'Correo Electrónico','class': 'form-control',}))
-#     titulo = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Asunto','class': 'form-control',}))
-#     mensaje = forms.CharField(widget=forms.Textarea(attrs={'placeholder': 'Mensaje','class': 'form-control',}))
+class RegistroForm(ModelForm):
+    class Meta:
+        model = Registro
+        exclude=['horafecha']

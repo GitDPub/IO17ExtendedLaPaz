@@ -14,6 +14,7 @@ urlpatterns = patterns('',
 
 	url(r'^about/$', views.about, name="about"),   
 	url(r'^comollegar/$', views.comollegar, name="comollegar"),   
+	url(r'^registro/$', views.registro, name="registro"),   
 	# url(r'^como-llegar/(?P<id_oportunidad>.*)/$', views.detalle_oportunidad, name="oportunidad"),  
 	# url(r'^agenda/$', views.aleatorio, name="aleatorio"),
 	# url(r'^speakers/$',  views.busqueda, name="busqueda"), 
