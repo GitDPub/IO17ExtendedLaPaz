@@ -1,5 +1,4 @@
-.buttonblue {
-    color: #FFFFFF;
+.button-skyblue {
     /*//display: flex;*/
     overflow: hidden;
 
@@ -19,7 +18,7 @@
     border: 0 none;
     border-radius: 4px;
 
-    font-size: 14px;
+    font-size: 24px;
     font-weight: 500;
     line-height: 1.3;
 
@@ -32,10 +31,59 @@
     flex: 0 0 160px;background: #4ae9c1;
   }
 
+.button-blue {
+    /*//display: flex;*/
+    overflow: hidden;
+    padding: 12px 12px;
+
+    cursor: pointer;
+    user-select: none;
+    transition: all 60ms ease-in-out;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none !important;
+    text-transform: none;
+    text-transform: capitalize;
+
+    color: #fff;
+    border: 0 none;
+    border-radius: 4px;
+
+    font-size: 16px !important;
+    font-weight: 500;
+    line-height: 1.3;
+
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+   
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 160px;background: #00232e;
+  }
+
+.button-blue:hover { 
+    background-color:#011015;
+    color: #4ae9c1;
+}
+
+
+
 .thanks-section{
     margin-bottom: 5rem;margin-top: 30px;
 }
 
 .sec_header_img{
     margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 640px) {
+    .sponsor .sponsor_inner .protfolio_content .gallery_item {
+        height:180px;
+    }
+}
+
+.jumbo-p{
+    font-size: 16px !important;
+    text-align: justify;
 }
