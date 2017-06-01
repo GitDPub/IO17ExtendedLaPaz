@@ -7,3 +7,8 @@ from django.forms import ModelForm, Textarea, TextInput
 from suit.widgets import AutosizedTextarea
 from PIL import Image
 from django.core.files.images import get_image_dimensions
+
+class RegistroAdmin(admin.ModelAdmin):
+    list_display   = ('nombre','apellido','horafecha')
+    ordering = ('nombre',)
+    search_fields = ('nombre','apellido')
