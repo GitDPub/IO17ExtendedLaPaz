@@ -204,7 +204,7 @@ ZINNIA_AUTO_CLOSE_COMMENTS_AFTER = 0
 #CONFIGURACION DEL DJANGO SUIT
 SUIT_CONFIG = {
     # header
-    'ADMIN_NAME': 'Agente de Becas',
+    'ADMIN_NAME': 'GDG La Paz',
     'HEADER_DATE_FORMAT': 'l, j F Y',
     'HEADER_TIME_FORMAT': 'H:i a',
 

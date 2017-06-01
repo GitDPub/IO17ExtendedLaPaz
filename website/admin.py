@@ -12,3 +12,5 @@ class RegistroAdmin(admin.ModelAdmin):
     list_display   = ('nombre','apellido','horafecha')
     ordering = ('nombre',)
     search_fields = ('nombre','apellido')
+
+admin.site.register(Registro,RegistroAdmin)
