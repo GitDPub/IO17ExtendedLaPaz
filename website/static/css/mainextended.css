@@ -79,11 +79,19 @@
 
 @media only screen and (min-width: 640px) {
     .sponsor .sponsor_inner .protfolio_content .gallery_item {
-        height:330px;
+        height:200px;
     }
 }
+
+
 
 .jumbo-p{
     font-size: 16px !important;
     text-align: justify;
 }
+
+
+
+.tituloprincipal{
+        padding-top: 170px !important;
+    }
