@@ -93,6 +93,15 @@
             >
               <a href="/about">¿Qué es?</a>
             </li>
+
+            <li 
+              {% if request.path == "/agenda/" %}
+              class="active"
+              {% endif %}
+            >
+              <a href="/agenda">Agenda</a>
+            </li>
+
             <li 
               {% if request.path == "/comollegar/" %}
               class="active"
@@ -145,6 +154,15 @@
             {% endif %}
           >
             <a href="/about">¿Qué es?</a></li>
+
+          <li 
+              {% if request.path == "/agenda/" %}
+              class="active"
+              {% endif %}
+            >
+              <a href="/agenda">Agenda</a>
+            </li>
+
           <li 
             {% if request.path == "/comollegar/" %}
             class="active"

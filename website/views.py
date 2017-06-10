@@ -31,6 +31,10 @@ def about(request):
     ctx = {}
     return render_to_response('about.html', ctx, context_instance=RequestContext(request))
 
+def agenda(request):
+    ctx = {}
+    return render_to_response('agenda.html', ctx, context_instance=RequestContext(request))
+
 def comollegar(request):
     ctx = {}
     return render_to_response('comollegar.html', ctx, context_instance=RequestContext(request))
