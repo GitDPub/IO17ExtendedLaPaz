@@ -76,8 +76,9 @@
                   <h4 class="media-heading pull-right" style="margin-right: 15px;text-align: right;">Conferencias<br><small>Talk Stage</small></h4>
                 </div>
                 <div class="media-left media-middle icon_side">
-                  <a >
-                    <i class="fa fa-microphone"></i>
+                  <a href="talks/" data-toggle="tooltip" data-placement="bottom" title="Ver conferencias">
+                    <!-- <i class="fa fa-microphone"></i> -->
+                    <img src="{% static "images/icons/talk.svg" %}" width="60" height="60" class="hvr-shrink"/>
                   </a>
                 </div>
               </div>
@@ -90,7 +91,8 @@
                   </div>
                   <div class="media-left media-middle icon_side">
                     <a >
-                      <i class="fa fa-code-fork"></i>
+                      <!-- <i class="fa fa-code-fork"></i> -->
+                      <img src="{% static "images/icons/code.svg" %}" width="60" height="60" class="hvr-shrink" />
                     </a>
                   </div>
                 </div>
@@ -103,7 +105,8 @@
                   </div>
                   <div class="media-left media-middle icon_side">
                     <a >
-                      <i class="fa fa-star"></i>
+                      <!-- <i class="fa fa-star"></i> -->
+                      <img src="{% static "images/icons/project.svg" %}" width="60" height="60" class="hvr-shrink"/>
                     </a>
                   </div>
                 </div>
@@ -116,33 +119,36 @@
                 </div>
                 <div class="media-left media-middle icon_side">
                   <a >
-                    <i class="fa fa-cogs"></i>
+                    <!-- <i class="fa fa-cogs"></i> -->
+                    <img src="{% static "images/icons/robot.svg" %}" width="60" height="60" class="hvr-shrink"/>
                   </a>
                 </div>
               </div>
             </div>
           
-            <div class="col-sm-6 event_describe">
+            <div class="col-sm-6 event_describe" style="border-top: 1px solid #4ae9c1;">
               <div class="media item">
                 <div class="media-body">
                   <h4 class="media-heading pull-right" style="margin-right: 15px;text-align: right;">Zona de juegos<br><small>Games Stage</small></h4>
                 </div>
                 <div class="media-left media-middle icon_side">
                   <a >
-                    <i class="fa fa-cogs"></i>
+                    <!-- <i class="fa fa-cogs"></i> -->
+                    <img src="{% static "images/icons/game.svg" %}" width="60" height="60" class="hvr-shrink"/>
                   </a>
                 </div>
               </div>
             </div>
           
-            <div class="col-sm-6 event_describe">
+            <div class="col-sm-6 event_describe" style="border-top: 1px solid #4ae9c1;">
               <div class="media item">
                 <div class="media-body">
                   <h4 class="media-heading pull-right" style="margin-right: 15px;text-align: right;">Sponsors<br><small>Made it possible</small></h4>
                 </div>
                 <div class="media-left media-middle icon_side">
-                  <a >
-                    <i class="fa fa-users"></i>
+                  <a href="#sponsors" data-toggle="tooltip" data-placement="bottom" title="Ver patrocinadores">
+                    <!-- <i class="fa fa-users"></i> -->
+                    <img src="{% static "images/icons/shakehand.svg" %}" width="60" height="60" class="hvr-shrink" />
                   </a>
                 </div>
               </div>
@@ -597,7 +603,7 @@
 </section> -->
  <section class="row sponsor">
   <div class="container">
-    <div class="row sponsor_inner">
+    <div class="row sponsor_inner sponsors" id="sponsors">
       <h2>Nuestros <span>patrocinadores</span></h2>
       <div class="protfolio_content">
         <div class="gallery_item flexslider">
@@ -796,5 +802,13 @@
 {% endblock %}
 
 {% block loadfilesbelow %}
-      
+      <script type="text/javascript">
+        $(document).on('click','.sponsors', function(event) {
+            event.preventDefault();
+            var target = "#" + this.getAttribute('data-target');
+            $('html, body').animate({
+                scrollTop: $(target).offset().top
+            }, 2000);
+        });
+      </script>
 {% endblock %}
