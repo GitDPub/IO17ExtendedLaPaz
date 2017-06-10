@@ -39,6 +39,11 @@ def comollegar(request):
     ctx = {}
     return render_to_response('comollegar.html', ctx, context_instance=RequestContext(request))
 
+def competencia_robots(request):
+    ctx = {}
+    return render_to_response('competencia-robots.html', ctx, context_instance=RequestContext(request))
+
+
 def registro(request):
     info_enviado=False
     correo=""

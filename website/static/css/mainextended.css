@@ -96,10 +96,14 @@
         padding-top: 170px !important;
     }
 
-section.agenda>.schedules>.schedule>.talk__middle {
+/*section.agenda>.schedules>.schedule>.talk__middle {
     height: 150px;
 }
 
 section.agenda>.schedules>.schedule>.talk__half {
     height: 50px;
+}*/
+
+.meanwhile{
+    background: #4ae9c1 !important;
 }

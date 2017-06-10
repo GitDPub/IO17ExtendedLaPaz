@@ -103,6 +103,14 @@
             </li>
 
             <li 
+              {% if request.path == "/competencia-robots/" %}
+              class="active"
+              {% endif %}
+            >
+              <a href="/competencia-robots">Competencia de Robots</a>
+            </li>
+
+            <li 
               {% if request.path == "/comollegar/" %}
               class="active"
               {% endif %}
@@ -161,6 +169,14 @@
               {% endif %}
             >
               <a href="/agenda">Agenda</a>
+            </li>
+
+            <li 
+              {% if request.path == "/competencia-robots/" %}
+              class="active"
+              {% endif %}
+            >
+              <a href="/competencia-robots">Competencia de Robots</a>
             </li>
 
           <li 
