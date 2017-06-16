@@ -9,7 +9,7 @@ from PIL import Image
 from django.core.files.images import get_image_dimensions
 
 class RegistroAdmin(admin.ModelAdmin):
-    list_display   = ('id','nombre','apellido','horafecha')
+    list_display   = ('id','nombre','apellido','horafecha','correo','celular')
     ordering = ('-id',)
     search_fields = ('nombre','apellido')
 
