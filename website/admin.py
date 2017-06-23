@@ -14,3 +14,11 @@ class RegistroAdmin(admin.ModelAdmin):
     search_fields = ('nombre','apellido')
 
 admin.site.register(Registro,RegistroAdmin)
+
+
+from import_export import resources
+
+class RegistroResource(resources.ModelResource):
+
+    class Meta:
+        model = Registro
