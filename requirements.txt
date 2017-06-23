@@ -53,3 +53,5 @@ static3==0.5.1
 textile==2.2.2
 tzlocal==1.0
 wsgiref==0.1.2
+
+django-import-export

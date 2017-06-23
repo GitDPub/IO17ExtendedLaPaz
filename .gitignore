@@ -27,7 +27,8 @@ Temporary Items
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
+*.pyc
+.vagrant/
 
 # C extensions
 *.so
@@ -81,9 +82,14 @@ target/
 ### Django ###
 *.log
 *.pot
+*.db
 *.pyc
 __pycache__/
-googleio/settings.py
 
 .env
 db.sqlite3
+googleio/local_settings.py
+
+
+
+servers.json

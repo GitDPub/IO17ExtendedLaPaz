@@ -12,7 +12,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '_9%aolx#e%d26h6zdkj*loasx(pjk^d9pwzb2yr#s0#00aph#5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = True
 
@@ -31,6 +31,8 @@ THIRD_PARTY_APPS = (
     'ckeditor',
     'ckeditor_uploader',
     'imagekit',
+
+    'import_export',
 )
 
 DJANGO_APPS = (
@@ -134,7 +136,7 @@ os.path.join(os.path.dirname(__file__),'../templates'),
 
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',  
+    'django.template.loaders.app_directories.Loader',
 )
 
 # Static files (CSS, JavaScript, Images)
@@ -193,8 +195,8 @@ SESSION_SECURITY_WARN_AFTER = 1800
 SESSION_SECURITY_EXPIRE_AFTER = 2100
 PYTHONUNBUFFERED=True
 
-DEFAULT_CHARSET = 'utf-8' 
-FILE_CHARSET = 'utf-8' 
+DEFAULT_CHARSET = 'utf-8'
+FILE_CHARSET = 'utf-8'
 
 SITE_ID = 1
 ZINNIA_MARKUP_LANGUAGE = 'textile'
@@ -240,3 +242,9 @@ CKEDITOR_CONFIGS = {
 #         'LOCATION': 'my_cache_table',
 #     }
 # }
+
+
+try:
+    from .local_settings import *
+except Exception as e:
+    pass
