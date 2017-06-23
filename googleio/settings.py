@@ -31,6 +31,8 @@ THIRD_PARTY_APPS = (
     'ckeditor',
     'ckeditor_uploader',
     'imagekit',
+
+    'import_export',
 )
 
 DJANGO_APPS = (
