@@ -8,17 +8,19 @@ from suit.widgets import AutosizedTextarea
 from PIL import Image
 from django.core.files.images import get_image_dimensions
 
-class RegistroAdmin(admin.ModelAdmin):
-    list_display   = ('id','nombre','apellido','horafecha','correo','celular')
-    ordering = ('-id',)
-    search_fields = ('nombre','apellido')
-
-admin.site.register(Registro,RegistroAdmin)
-
-
 from import_export import resources
+from import_export.admin import ImportExportModelAdmin
+
 
 class RegistroResource(resources.ModelResource):
 
     class Meta:
         model = Registro
+
+class RegistroAdmin(ImportExportModelAdmin):
+    list_display   = ('id','nombre','apellido','horafecha','correo','celular')
+    ordering = ('-id',)
+    search_fields = ('nombre','apellido')
+    resource_class = RegistroResource
+
+admin.site.register(Registro,RegistroAdmin)
