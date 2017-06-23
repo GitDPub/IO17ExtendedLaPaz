@@ -22,7 +22,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 THIRD_PARTY_APPS = (
-    'suit',
+    # 'suit',
     'bootstrapform',
     "geoposition",
     'session_security',
@@ -32,7 +32,7 @@ THIRD_PARTY_APPS = (
     'ckeditor_uploader',
     'imagekit',
 
-    'import_export',
+
 )
 
 DJANGO_APPS = (
@@ -47,6 +47,7 @@ DJANGO_APPS = (
 
 LOCAL_APPS = (
     'website',
+    'import_export',
 )
 
 INSTALLED_APPS =  THIRD_PARTY_APPS + DJANGO_APPS + LOCAL_APPS
